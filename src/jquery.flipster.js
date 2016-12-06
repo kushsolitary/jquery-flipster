@@ -508,13 +508,13 @@
             function keyboardEvents(elem) {
                 if ( settings.keyboard ) {
                     elem[0].tabIndex = 0;
-                    elem.on('keydown.flipster', throttle(function(e) {
+                    $(document).on('keydown.flipster', throttle(function(e) {
                         var code = e.which;
                         if ( code === 37 || code === 39 ) {
                             jump( code === 37 ? 'prev' : 'next' );
                             e.preventDefault();
                         }
-                    }, 250, true));
+                    }, 50, true));
                 }
             }
 
