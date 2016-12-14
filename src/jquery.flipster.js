@@ -474,8 +474,6 @@
 
                 _items = _container.find(settings.itemSelector);
 
-                if ( _items.length <= 1 ) { return; }
-
                 _items
                     .addClass(classes.item)
                     // Wrap inner content
@@ -614,11 +612,6 @@
                 self.css('visibility', 'hidden');
 
                 index();
-
-                if ( _items.length <= 1 ) {
-                    self.css('visibility', '');
-                    return;
-                }
 
                 style = (settings.style ? 'flipster--' + settings.style.split(' ').join(' flipster--') : false);
 
